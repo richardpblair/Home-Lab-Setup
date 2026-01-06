@@ -20,7 +20,7 @@ Before spinning up VMs like a caffeinated sysadmin, I drew out my plan:
 
 ![Network Diagram](images/network.png)
 
-A simple diagram showing pfSense connected to both the “Internet (NAT)” and an “Internal Network.”
+A simple diagram showing pfSense connected to both the “NAT (WAN/Internet)” and an “Internal Network: Cyber (LAN).”
 The Windows 11, Ubuntu, and Windows Server 2022 VMs reside within the internal network labeled “Cyber”.
 
 ### Network Plan:
@@ -62,7 +62,7 @@ Name: “Ubuntu Lab” | System: 2048 MB, 2 Processors, 25 GB, and network set t
 
 Name: “Kali Linux Lab” | System: 4096 MB, 2 Processors, 25 GB, and network set to “Internal Network:  Cyber”
 
-![Kall Linux](images/kali.png)  
+![Kali Linux](images/kali.png)  
 
 ### Windows Server 2022:
 
@@ -144,7 +144,7 @@ Now the fun part — making the machines talk.
 2.	Pinged between them:
 * Pinging 10.0.0.20 with 32 bytes of data: Reply from 10.0.0.20 time<1ms. Everything was connected through pfSense — mission success!
 
-![Bidirection](images/bidirectional%20ping.png)
+![Bidirectional](images/bidirectional%20ping.png)
 
 <br><br>
 
@@ -168,7 +168,7 @@ To prove everything worked, I tested a few things:
 * Documentation (and screenshots) are your best friend for recreating labs later.
 
 ### Next Steps:
-* Add an Active Directory VM
+* Permote windows server to a domain controler and join Windows 11 to the domain.
 * Practice DHCP, DNS, and Group Policy
-* Simulate attacks with Kali Linux in a safe subneclar
+* Simulate attacks with Kali Linux in a safe subnet
 
